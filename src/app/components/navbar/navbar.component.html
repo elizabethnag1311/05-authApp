@@ -1,1 +1,14 @@
-<p>navbar works!</p>
+<p>
+<mat-toolbar>
+<span>Auth0app
+  <button mat-button routerLinkActive="active" routerLink="home">Home</button>
+  <button mat-button routerLinkActive="active" routerLink="precios">Precios</button>
+  <button mat-button
+  *ngIf="auth.isAuthenticated$ | async;"
+   routerLinkActive="active" routerLink="protegida">Protegida</button>
+</span>
+<span class="example-spacer"></span>
+<app-auth-button></app-auth-button>
+</mat-toolbar>
+</p>
+
